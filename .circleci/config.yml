@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.12
+      - image: python:3.12.4-alpine3.20
 
     working_directory: ~/repo
 
@@ -17,6 +17,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+            python3 -m pip install --upgrade pip
       # Step 3: run linter and tests
       - run:
           name: run tests
