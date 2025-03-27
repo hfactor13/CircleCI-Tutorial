@@ -3,3 +3,4 @@
 .coverage
 calculator
 __pycache__
+.DS_Store
